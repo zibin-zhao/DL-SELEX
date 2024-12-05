@@ -11,7 +11,7 @@ The workflow is divided into the following steps:
 3. **Model Training and Evaluation**
 4. **BGA Analysis and SELEX Library Design**
 
-## Quickstart
+## Generalizability on other molecule families
 Researchers who wish to apply the cerrent workflow to other types of molecule family, simply replace the colelcted aptamer sequences with their correponding classes and scores in the train_dataset.xlsx under the 0-Sample Data folder. Then, the predicted initial library can be obtained following the workflow in the followings.
 
 ## Workflow
