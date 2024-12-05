@@ -21,6 +21,6 @@ The AptaClux can be accessed via the online server in http://hsingapp.ust.hk or 
 
 The folder Figures contains the Python scripts for data visualization in this manuscript.
 
-### Contacts
+## Contacts
 
 For further inquiries related to the supplementary code, please contact zzhaobz@connect.ust.hk
