@@ -19,7 +19,7 @@ Script: `Primer_truncation.py`
 
 - **Input:** Sequence data (.xlsx)
 - **Output:** Truncated sequences and corresponding DPPN
-- **Details:** Truncates primer sequences as per project requirements. Further details can be found [here](https://www.notion.so/Primer_truncation-ee39abd30b274cc1acfa3cf35fcee076?pvs=21).
+- **Details:** Global truncation program designed for cutting the redundant primer to improve model accuracy. 
 
 ### 2. MF_preprocessing (1D)
 
