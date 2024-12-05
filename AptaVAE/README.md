@@ -16,7 +16,7 @@ Researchers who wish to apply the cerrent workflow to other types of molecule fa
 
 ## Workflow
 
-Notes: all scripts were tested and can be run across windows, linux and Macosx platform, except for the primer_truncation script that utilzied the NUPACK packages. Before running primer_truncation.py, users should make sure the NUPACK can be run locally suggested on Linux or Macosx. Detailed NUPACK installation can be found at: https://docs.nupack.org/ with proper license.
+Notes: all scripts were tested and can be run across windows, linux and macOS platform, except for the primer_truncation script that utilzied the NUPACK packages. Before running primer_truncation.py, users should make sure the NUPACK can be run locally suggested on Linux or macOS. Detailed NUPACK installation can be found at: https://docs.nupack.org/ with proper license.
 
 ### 1. Primer Truncation
 
