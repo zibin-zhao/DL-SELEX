@@ -34,7 +34,7 @@ You can also specifify options:
 $ python run.py --help
 usage: run.py [-h] -i INPUT [-o OUTPUT] [-nb NUM_DEVICES] [-max MAX_EPOCH] [-tp TEMPERATURE] [-ions IONS] [-oligos OLIGOS] [-seed SEED]
 
-NGS VAE Training and MSA Pipeline
+AptaClux Model Training and Sampling for aptamer candidates generation.
 
 options:
   -h, --help            show this help message and exit
