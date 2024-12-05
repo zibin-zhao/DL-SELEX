@@ -58,6 +58,9 @@ options:
                         Random seed for reproducibility.
 ```
 
+## Detailed model workflow
+
+Other than source_code, the related more detailed code for model training and preprocessing can be also found in this directory.
 
 ## License
 
