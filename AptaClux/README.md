@@ -9,27 +9,28 @@ The AptaClux web server provides the simplest and most user-friendly interface f
 ## Quickstart with local build (Linux / macOS)
 
 1. Ensure python version > 3.9 is installed locally the create a virtual environment.
-'''shell
+
+```shell
 % pip install virtualenv
 % cd project_folder
 % virtualenv venv
 % source venv/bin/activate
-'''
+```
 
 2. Installed NUPACK following the link: https://docs.nupack.org/start/#maclinux-installation
 
 3. Installed the required packages with
-'''shell
+```shell
 % pip install -r requirements.txt
-'''
+```
 
-4. Quick run with sample.fasta
-'''shell
+5. Quick run with sample.fasta
+```shell
 % python run.py -i sample.fasta -o output.txt
-'''
+```
 
 You can also specifify options:
-'''shell
+```shell
 $ python run.py --help
 usage: run.py [-h] -i INPUT [-o OUTPUT] [-nb NUM_DEVICES] [-max MAX_EPOCH] [-tp TEMPERATURE] [-ions IONS] [-oligos OLIGOS] [-seed SEED]
 
@@ -53,7 +54,7 @@ options:
                         Oligonucleotide type, default is DNA.
   -seed SEED, --seed SEED
                         Random seed for reproducibility.
-'''
+```
 
 
 ## License
