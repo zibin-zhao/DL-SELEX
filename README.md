@@ -3,7 +3,7 @@
 
 ## Tested environment
 
-* Ubuntu == 18.04
+* Ubuntu == 20.04
 * python == 3.9
 * pytorch == 1.5.0
 * cuda == 12.1
