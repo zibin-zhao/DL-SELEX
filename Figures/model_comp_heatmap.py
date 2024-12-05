@@ -1,6 +1,3 @@
-'''Heatmap plot for model performance comparison by Zibin Zhao'''
-
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
@@ -27,32 +24,37 @@ df.set_index('Model', inplace=True)
 custom_cmap = LinearSegmentedColormap.from_list('custom_cmap', ['#ffffff', '#c42238'])
 
 # Plotting
-plt.figure(figsize=(7, 3))  
-sns.set(font_scale=0.6)  
-sns.set_style("white") 
-plt.rcParams["font.family"] = "Arial" 
+plt.figure(figsize=(7, 3))  # Square figure size
+sns.set(font_scale=0.6)  # Reduce font size further
+sns.set_style("white")  # Clean style
+plt.rcParams["font.family"] = "Arial"  # Set font to Arial
 
 # Heatmap
 ax = sns.heatmap(
-    df.T, 
-    annot=True,  
-    cmap=custom_cmap,  
-    linewidths=0.4,  
-    linecolor='white',  
-    cbar_kws={'label': 'Metric Value'},  
-    square=True  
+    df.T,  # Transpose to make it horizontal
+    annot=True,  # Remove numbering inside cells
+    cmap=custom_cmap,  # Custom colormap
+    linewidths=0.4,  # Black outline thickness
+    linecolor='white',  # Outline color
+    cbar_kws={'label': 'Metric Value'},  # Colorbar label
+    square=True  # Force square cells
 )
 
-ax.set_aspect('auto') 
+# Adjust aspect ratio
+ax.set_aspect('auto')  # Ensure squares remain consistent
 
 # Titles and labels
-ax.xaxis.set_label_position('top')  
+ax.xaxis.set_label_position('top')  # Move x-axis title to the top
 ax.xaxis.tick_top() 
-ax.tick_params(axis='x', length=0)  
+ax.tick_params(axis='x', length=0)  # Remove tick marks on the x-axis
 
-plt.xticks(rotation=90, fontsize=8)  
-plt.yticks(fontsize=8, rotation=0)
+plt.xticks(rotation=90, fontsize=8,  fontweight='bold')  # Adjust label rotation and font size
+plt.yticks(fontsize=8, rotation=0, fontweight='bold')
+# Place x-axis title at the top
+ # Move x-axis ticks to the top
+#plt.xlabel('Model', fontsize=10, fontweight='bold')  # Set x-axis title
 
-plt.tight_layout()  
+
+plt.tight_layout()  # Adjust layout to fit everything
 plt.savefig('model_comp_heatmap.tiff', dpi=300, format='tiff', facecolor='#FFFFFF')
 plt.show()
