@@ -1,9 +1,9 @@
 
-# AptaVAE Workflow
+#AptaVAE Workflow
 
 This repository contains scripts and files for the **AptaVAE** model in the **DL-SELEX** project. The workflow involves sequence processing and feature extraction, followed by data preparation for machine learning models.
 
-## Overview
+##Overview
 
 The workflow is divided into the following steps:
 1. **Primer Truncation**
