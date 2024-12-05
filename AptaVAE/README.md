@@ -11,7 +11,12 @@ The workflow is divided into the following steps:
 3. **Model Training and Evaluation**
 4. **BGA Analysis and SELEX Library Design**
 
+## Quickstart
+Researchers who wish to apply the cerrent workflow to other types of molecule family, simply replace the colelcted aptamer sequences with their correponding classes and scores in the train_dataset.xlsx under the 0-Sample Data folder. Then, the predicted initial library can be obtained following the workflow in the followings.
+
 ## Workflow
+
+Notes: all scripts were tested and can be run across windows, linux and Macosx platform, except for the primer_truncation script that utilzied the NUPACK packages. Before running primer_truncation.py, users should make sure the NUPACK can be run locally suggested on Linux or Macosx. Detailed NUPACK installation can be found at: https://docs.nupack.org/ with proper license.
 
 ### 1. Primer Truncation
 
@@ -19,7 +24,7 @@ Script: `Primer_truncation.py`
 
 - **Input:** Sequence data (.xlsx)
 - **Output:** Truncated sequences and corresponding DPPN
-- **Details:** Global truncation program designed for cutting the redundant primer to improve model accuracy. 
+- **Details:** Global truncation program designed for cutting the redundant primer to improve model accuracy.
 
 ### 2. MF_preprocessing (1D)
 
