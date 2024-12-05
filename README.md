@@ -1,5 +1,6 @@
 # Supplementary code for "Accelerating Small-Molecule Aptamer Selection with Structural-Focused DL-SELEX, Starting with Steroid"
 
+[![DOI](https://zenodo.org/badge/898798378.svg)](https://doi.org/10.5281/zenodo.14281817)
 
 ## Tested environment
 
