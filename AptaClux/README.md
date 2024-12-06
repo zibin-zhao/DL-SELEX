@@ -6,11 +6,13 @@ AptaClux is a deep learning-based software aimed at providing the most straightf
 
 The AptaClux web server provides the simplest and most user-friendly interface for any user to analyze their HT-SELEX NGS data with a deep learning model in one click. Users can input the NGS data as a FASTA datatype into the server, and two predicted aptamer sequences will be printed out or emailed to the user after model training and sampling.
 
-## Quickstart with local build (Linux / macOS / Windows(subsystem))
+## Quickstart with local build (Linux / macOS / Windows-subsystem)
 
 1. Download the source_code in the current directory.
 
-2. Ensure python version > 3.9 is installed locally the create a virtual environment.
+2. Ensure you have python installed and version > 3.9 is installed locally the create a virtual environment.
+
+2.1 (For Python download) If not, we recommend using miniconda installation for integrated Python following here: https://docs.anaconda.com/miniconda/install/
 
 ```shell
 % pip install virtualenv
