@@ -15,7 +15,7 @@ AptaVAE is designed as the first part of the DL-SELEX approach, which generates 
 
 ## AptaClux
 
-AptaClux as the second part of the DL-SELEX approach, can be accessed via our online web server at http://hsingapp.ust.hk or with open source code download in the AptaClux directory. To deploy the model locally for their own used, detailed procedure can be found in the README file under the AptaClux directory.
+AptaClux as the second part of the DL-SELEX approach, can be accessed via our online web server at http://hsingapp.ust.hk. To deploy the model locally for own used, detailed procedure can be found in the README file under the AptaClux directory.
 
 ## Figures
 
