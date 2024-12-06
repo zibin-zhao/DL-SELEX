@@ -62,7 +62,7 @@ options:
 
 ## Detailed model workflow
 
-Other than source_code, the related more detailed code for model training and preprocessing can be also found in this directory.
+Other than source_code, the related more detailed code for model training and preprocessing can be also found in this directory following steps 1-5.
 
 ## License
 
