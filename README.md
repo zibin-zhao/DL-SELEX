@@ -11,11 +11,11 @@
 
 ## AptaVAE
 
-The AptaVAE is designed as the first part of the DL-SELEX approach, which generates the pre-defined guided initial library of the collected steroids. The detailed workflow of how the code works can be found inside the AptaVAE folder with the README file. 
+AptaVAE is designed as the first part of the DL-SELEX approach, which generates the pre-defined guided initial library of the collected steroids. The detailed workflow of how the code works can be found inside the AptaVAE folder with the README file. 
 
 ## AptaClux
 
-The AptaClux can be accessed via the online server in http://hsingapp.ust.hk or downloaded via the source code in the AptaClux folder. To deploy the model locally for their own used, detailed procedure can be found in the README file under the AptaClux directory.
+AptaClux as the second part of the DL-SELEX approach, can be accessed via our online web server at http://hsingapp.ust.hk or with open source code download in the AptaClux directory. To deploy the model locally for their own used, detailed procedure can be found in the README file under the AptaClux directory.
 
 ## Figures
 
