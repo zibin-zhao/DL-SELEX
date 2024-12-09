@@ -36,7 +36,7 @@ LAYER_2_SIZE = 64
 LATENT_SIZE = 64
 DROPOUT_RATE = 0.5
 INPUT_SIZE = 273    #*Please adjust accordingly (same as the INPUT_SIZE in 3-train.py)
-OUTPUT_SIZE = 273   #*Please adjust accordingly (same as the INPUT_SIZE in 3-train.py)
+OUTPUT_SIZE = 273   #*Please adjust accordingly (same as the OUTPUT_SIZE in 3-train.py)
 
 #NOTE: For CS & TES is 39, for DHEA & CHO is 32
 SEQ_LENGTH = 39 * 4
