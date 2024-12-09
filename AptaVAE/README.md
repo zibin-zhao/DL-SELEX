@@ -68,7 +68,7 @@ Script: `trainVAE.py`
 
 ### 5. BGA Analysis
 
-Script: `BGA_analysis.py`
+Script: `BGA_batch_gen_analysis.py`
 
 - **Input:** Model latent space
 - **Output:** Sequences with corresponding class and scores
