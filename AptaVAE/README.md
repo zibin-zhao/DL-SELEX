@@ -30,9 +30,8 @@ Script: `Primer_truncation.py`
 
 Script: `1D.py`
 
-- **Input:** 
-  - `train_dataset_refined_primer.csv`
-  - *Adjust MAX_LENGTH to your cases 
+- **Input:** `train_dataset_refined_primer.csv`
+   *Please adjust MAX_LENGTH according to your case
 
 - **Outputs:** 
   - `MF_primer_input.pt`
@@ -59,7 +58,7 @@ Script: `3D_preprocessing.py`
 
 Script: `trainVAE.py`
 
-- **Inputs:** 
+- **Inputs:**
   - `MF_primer_input.pt`, `MF_primer_mask.pt`
   - `3D_primer_input.pt`, `3D_primer_mask.pt`
 - **Outputs:** 

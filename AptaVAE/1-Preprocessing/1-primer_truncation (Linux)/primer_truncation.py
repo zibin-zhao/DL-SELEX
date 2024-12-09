@@ -9,7 +9,6 @@ df_raw = pd.read_excel('ITC_truncation_2024.xlsx')
 my_model = Model(material='dna', celsius=25, sodium=0.147)#, Potassium=0.0045)
 
 
-
 print(df_raw.head())
 def trim_sequence(seq, model):
     # Compute initial structure
@@ -84,4 +83,4 @@ def process_sequences(df, model):
 
     return df
 
-df = process_sequences(df, my_model)
+df = process_sequences(df_raw, my_model)

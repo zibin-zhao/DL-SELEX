@@ -19,7 +19,8 @@ ENCODING_DICT = {'<': [1, 0, 0, 0, 0, 0],  # encoding for SOS
                  '>': [0, 0, 0, 0, 0, 1]}  # encoding for EOS
 
 '''DEFINE the maximum length of sequence + SOS + EOS'''
-MAX_LENGTH = 100 + 2  # maximum length of sequence + SOS + EOS
+#*Please adjust accordingly to your max sequence length
+MAX_LENGTH = 100 + 2  # maximum length of sequence + SOS + EOS 
 PATH = "../data/refined_primer/train_dataset_refined_primer.csv"
 
 def load_data(path):
