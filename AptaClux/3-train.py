@@ -21,7 +21,7 @@ from sklearn.manifold import TSNE
 import seaborn as sns
 
 # Local application imports
-from utility import compute_edit_distance, onehot_to_seq, onehot_to_2d
+from utility import compute_edit_distance #, onehot_to_seq , onehot_to_2d(have been processed in 2-NGS_preprocessing.py)
 
 # Set global seed for reproducibility
 SEED = 42
@@ -39,14 +39,14 @@ EPOCHS = 2000
 WEIGHT_DECAY = 1e-4
 
 # Constants
-INPUT_SIZE = 273  # 39 * (3+4)
-OUTPUT_SIZE = 273  
+INPUT_SIZE = 273  # 39 * (3+4)  #* Please adjust accordingly to your cases
+OUTPUT_SIZE = 273               #* Should be same as INPUT_SIZE
 SEQ_LENGTH = 39 * 4
 MAX_LENGTH = 39  
 LOG_INTERVAL = 200
 EARLY_LIMIT = 50
 
-# Paths
+# Paths #* Please change here accordingly
 WRITER_PATH = "runs/CSr3"
 MODEL_NAME = './save_models/CSr3.pt'
 DATA_PATH = './data/input_data_CSr3.pt'
@@ -164,10 +164,10 @@ def test(epoch, model, test_loader, device):
             test_loss += loss_function(recon_x, data, mu, logvar).item()
             comparison = [data.view(-1, OUTPUT_SIZE), recon_x.view(-1, OUTPUT_SIZE)]
             # Extract sequences
-            original_seq = onehot_to_seq(comparison[0][0].detach().cpu().numpy()[:SEQ_LENGTH])
-            original_2d = onehot_to_2d(comparison[0][0].detach().cpu().numpy()[SEQ_LENGTH:])
-            reconstructed_seq = onehot_to_seq(comparison[1][0].detach().cpu().numpy()[:SEQ_LENGTH])
-            reconstructed_2d = onehot_to_2d(comparison[1][0].detach().cpu().numpy()[SEQ_LENGTH:])
+            original_seq = (comparison[0][0].detach().cpu().numpy()[:SEQ_LENGTH])
+            original_2d = (comparison[0][0].detach().cpu().numpy()[SEQ_LENGTH:])
+            reconstructed_seq = (comparison[1][0].detach().cpu().numpy()[:SEQ_LENGTH])
+            reconstructed_2d = (comparison[1][0].detach().cpu().numpy()[SEQ_LENGTH:])
             
             # Compute the Edit distance
             total_seq_edit_distance += compute_edit_distance(original_seq, reconstructed_seq)
