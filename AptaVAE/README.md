@@ -28,9 +28,12 @@ Script: `Primer_truncation.py`
 
 ### 2. MF_preprocessing (1D)
 
-Script: `MF_preprocessing.py`
+Script: `1D.py`
 
-- **Input:** `train_dataset_refined_primer.csv`
+- **Input:** 
+  - `train_dataset_refined_primer.csv`
+  - *Adjust MAX_LENGTH to your cases 
+
 - **Outputs:** 
   - `MF_primer_input.pt`
   - `MF_primer_mask.pt`
@@ -54,10 +57,10 @@ Script: `3D_preprocessing.py`
 
 ### 4. Preprocessing and Model Training
 
-Script: `trained_refined_primer.py`
+Script: `trainVAE.py`
 
 - **Inputs:** 
-  - `MF1D_input.pt`, `MF1D_mask.pt`
+  - `MF_primer_input.pt`, `MF_primer_mask.pt`
   - `3D_primer_input.pt`, `3D_primer_mask.pt`
 - **Outputs:** 
   - Saved model
