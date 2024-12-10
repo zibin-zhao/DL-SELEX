@@ -6,10 +6,10 @@ import torch
 import numpy as np
 import pandas as pd
 from utility import *
-from model_64 import VAE
+from model_64 import VAE #* Add model from the 7-trained_models according to your case
 import matplotlib.pyplot as plt
 
-BATCH_SIZE = 200
+BATCH_SIZE = 200 #* Change here according to your batch size, eg. 8, 64, etc (should be the same with the model you import)
 N_BATCHES = 100
 SEQ_LENGTH = 118 * 6
 LAYER_2_SIZE = 256
@@ -17,13 +17,13 @@ THRESHOLD = 0.9
 
 INPUT_SIZE = 1
 layer1_dim = 256
-layer2_dim = 256
+layer2_dim = 256 
 OUTPUT_SIZE = 1741
 
 PATH = "./save_models/refined_primer/best_model_8.pt"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-model = VAE(INPUT_SIZE, layer1_dim, layer2_dim, OUTPUT_SIZE).to(device)
+model = VAE().to(device) 
 model.load_state_dict(torch.load(PATH)['model_state_dict'])
 model.eval()
 
@@ -42,7 +42,7 @@ for batch in range(N_BATCHES):
 
         for i in range(BATCH_SIZE):
             decoded_seq = np.array((onehot_to_seq(sample.numpy()[i, :SEQ_LENGTH])))
-            decoded_mol_class = decode_class(sample.numpy()[i, 1732:1740])[0]
+            decoded_mol_class = decode_class(sample.numpy()[i, SEQ_LENGTH:SEQ_LENGTH+8])[0]
             decoded_score = sample.numpy()[i, -1]
 
             decoded_seqs.append(decoded_seq)
