@@ -72,6 +72,7 @@ Script: `BGA_batch_gen_analysis.py`
 
 - **Input:** Model latent space
 - **Output:** Sequences with corresponding class and scores
+- **Remarks:** Please import different model from the folder 7-trained_models accordingly to your case.
 
 ### 6. Decoded Sequences by Class
 
