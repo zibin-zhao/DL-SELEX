@@ -82,7 +82,7 @@ Script: `decoded_seq_by_class.py`
 
 ### 7. MSA for Class Sequences
 
-Script: `MSA_class_sequences.py`
+`Please run MSA using software and output the result csv to proceed onto 8-SELEX Library Design`
 
 - **Details:** Conducts multiple sequence alignment (MSA) for sequences in each class, preparing for SELEX library design.
 
