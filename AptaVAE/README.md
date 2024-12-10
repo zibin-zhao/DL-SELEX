@@ -28,9 +28,11 @@ Script: `Primer_truncation.py`
 
 ### 2. MF_preprocessing (1D)
 
-Script: `MF_preprocessing.py`
+Script: `1D.py`
 
 - **Input:** `train_dataset_refined_primer.csv`
+   *Please adjust MAX_LENGTH according to your case
+
 - **Outputs:** 
   - `MF_primer_input.pt`
   - `MF_primer_mask.pt`
@@ -54,10 +56,10 @@ Script: `3D_preprocessing.py`
 
 ### 4. Preprocessing and Model Training
 
-Script: `trained_refined_primer.py`
+Script: `trainVAE.py`
 
-- **Inputs:** 
-  - `MF1D_input.pt`, `MF1D_mask.pt`
+- **Inputs:**
+  - `MF_primer_input.pt`, `MF_primer_mask.pt`
   - `3D_primer_input.pt`, `3D_primer_mask.pt`
 - **Outputs:** 
   - Saved model
@@ -66,10 +68,11 @@ Script: `trained_refined_primer.py`
 
 ### 5. BGA Analysis
 
-Script: `BGA_analysis.py`
+Script: `BGA_batch_gen_analysis.py`
 
 - **Input:** Model latent space
 - **Output:** Sequences with corresponding class and scores
+- **Remarks:** Please import different model from the folder 7-trained_models accordingly to your case.
 
 ### 6. Decoded Sequences by Class
 
@@ -80,7 +83,7 @@ Script: `decoded_seq_by_class.py`
 
 ### 7. MSA for Class Sequences
 
-Script: `MSA_class_sequences.py`
+`Please run MSA using software and output the result csv to proceed onto 8-SELEX Library Design`
 
 - **Details:** Conducts multiple sequence alignment (MSA) for sequences in each class, preparing for SELEX library design.
 

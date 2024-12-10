@@ -123,8 +123,8 @@ def main():
     print(combined_matrix.shape)  # Should be torch.Size([195, 3, 85, 85])
     print(combined_mask.shape)   # Should be torch.Size([195, 3, 85, 85])
     
-    torch.save(combined_matrix, '../data/refined_primer/primer_3d_input.pt')
-    torch.save(combined_mask, '../data/refined_primer/primer_3d_mask.pt')
+    torch.save(combined_matrix, '../data/refined_primer/3D_primer_input.pt')
+    torch.save(combined_mask, '../data/refined_primer/3D_primer_mask.pt')
 
 if __name__=="__main__":
     main()

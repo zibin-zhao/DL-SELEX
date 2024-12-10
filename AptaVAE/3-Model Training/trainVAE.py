@@ -54,7 +54,7 @@ SEED = 42
 # Initialize TensorBoard writer
 writer = SummaryWriter(WRITER_PATH)
 
-
+#* Please change path according to your case
 DATA_PATH = './data/MF_input_data.pt'
 MASK_PATH = './data/MF_input_mask.pt'   
 x1_PATH = './data/1d_input.pt'

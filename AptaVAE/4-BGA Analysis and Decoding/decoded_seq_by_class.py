@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import re
 
 df = pd.read_csv('./8RP_BGA_decoded_results01.csv')
-FILE = '8RP_BGA_grouped_sequences_by_classes01.xlsx'
+FILE = '8RP_BGA_grouped_sequences_by_classes01.xlsx' #*path to save your output
 
 start_str = '<'
 end_str = '>'
