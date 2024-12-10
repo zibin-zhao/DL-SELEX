@@ -93,7 +93,7 @@ Notebook: `SELEX_library_design.ipynb`
 
 ## Requirements
 
-- Python 3.8 or higher
+- Python 3.9 or higher
 - PyTorch
 - Biopython
 - Nupack (Linux)
