@@ -1,4 +1,4 @@
-# Supplementary code for "Accelerating Small-Molecule Aptamer Selection via Structural-enhanced Deep Learning of Steroid"
+# Supplementary code for "Structure-enhanced Deep Learning Accelerates Aptamer Selection for Small Molecule Families like Steroids"
 
 [![DOI](https://zenodo.org/badge/898798378.svg)](https://doi.org/10.5281/zenodo.14281817)
 
