@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import os
 from sklearn.manifold import TSNE
 
-__all__ = ['compute_edit_distance', 'onehot_to_seq', 'decode_class', 'plot_t_sne']
+__all__ = ['compute_edit_distance', 'onehot_to_seq', 'onehot_to_2d', 'decode_class', 'plot_t_sne']
 
 def compute_edit_distance(seq1, seq2):
     """
@@ -21,16 +21,29 @@ def write_to_fasta(sequences, output_path):
     print(f"FASTA file written to {output_path}")
 
 def onehot_to_seq(onehot_seq):
+    """Decode a flattened one-hot encoded sequence into a string."""
     bases = ['A', 'T', 'C', 'G']
     seq = ''
-    for i in range(0, len(onehot_seq), 6):      # as we flatten the vector, hence every 5 samples is a base
+    for i in range(0, len(onehot_seq), 4):
         try:
-            #print(len(onehot_seq))
-            seq += bases[np.argmax(onehot_seq[i:i+6])]
+            seq += bases[np.argmax(onehot_seq[i:i + 4])]
         except IndexError:
             print(f"Error at index {i} with onehot_seq length {len(onehot_seq)}")
             break
     return seq
+
+
+def onehot_to_2d(onehot_2d):
+    """Decode a flattened one-hot encoded 2D structure into dot-bracket notation."""
+    bases = ['.', '(', ')']
+    seq_2d = ''
+    for i in range(0, len(onehot_2d), 3):
+        try:
+            seq_2d += bases[np.argmax(onehot_2d[i:i + 3])]
+        except IndexError:
+            print(f"Error at index {i} with onehot_2d length {len(onehot_2d)}")
+            break
+    return seq_2d
 
 # def decode_class(onehot_class):
 #     """Decode a one-hot encoded class back to its original class."""
