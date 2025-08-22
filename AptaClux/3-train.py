@@ -21,7 +21,7 @@ from sklearn.manifold import TSNE
 import seaborn as sns
 
 # Local application imports
-from utility import compute_edit_distance #, onehot_to_seq , onehot_to_2d(have been processed in 2-NGS_preprocessing.py)
+from utility import compute_edit_distance, onehot_to_seq, onehot_to_2d
 
 # Set global seed for reproducibility
 SEED = 42
@@ -168,17 +168,23 @@ def test(epoch, model, test_loader, device):
             original_2d = (comparison[0][0].detach().cpu().numpy()[SEQ_LENGTH:])
             reconstructed_seq = (comparison[1][0].detach().cpu().numpy()[:SEQ_LENGTH])
             reconstructed_2d = (comparison[1][0].detach().cpu().numpy()[SEQ_LENGTH:])
-            
-            # Compute the Edit distance
-            total_seq_edit_distance += compute_edit_distance(original_seq, reconstructed_seq)
-            total_2d_edit_distance += compute_edit_distance(original_2d, reconstructed_2d)
+
+            # Convert one-hot encodings to string representations
+            original_seq_str = onehot_to_seq(original_seq)
+            reconstructed_seq_str = onehot_to_seq(reconstructed_seq)
+            original_2d_str = onehot_to_2d(original_2d)
+            reconstructed_2d_str = onehot_to_2d(reconstructed_2d)
+
+            # Compute the Edit distance on strings
+            total_seq_edit_distance += compute_edit_distance(original_seq_str, reconstructed_seq_str)
+            total_2d_edit_distance += compute_edit_distance(original_2d_str, reconstructed_2d_str)
             total_seqs += 1
             print('-' * 89)
             print(f'SAMPLE {i+1}')
-            print(f"Original sequence: {original_seq}")
-            print(f"Reconstructed sequence: {reconstructed_seq}")
-            print(f"Original 2D structure: {original_2d}")
-            print(f"Reconstructed 2D structure: {reconstructed_2d}")
+            print(f"Original sequence: {original_seq_str}")
+            print(f"Reconstructed sequence: {reconstructed_seq_str}")
+            print(f"Original 2D structure: {original_2d_str}")
+            print(f"Reconstructed 2D structure: {reconstructed_2d_str}")
             
     avg_test_loss = test_loss / len(test_loader.dataset)
     avg_seq_edit_distance = total_seq_edit_distance / total_seqs
