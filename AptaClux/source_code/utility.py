@@ -27,7 +27,7 @@ def compute_edit_distance(seq1, seq2):
 def onehot_to_seq(onehot_seq):
     bases = ['A', 'T', 'C', 'G']
     seq = ''
-    for i in range(0, len(onehot_seq), 4):      # as we flatten the vector, hence every 5 samples is a base
+    for i in range(0, len(onehot_seq), 4):      # as we flatten the vector, every 4 samples represent a base
         try:
             #print(len(onehot_seq))
             seq += bases[np.argmax(onehot_seq[i:i+4])]
@@ -40,7 +40,7 @@ def onehot_to_seq(onehot_seq):
 def onehot_to_2d(onehot_2d):
     bases = ['.', '(', ')']
     seq_2d = ''
-    for i in range(0, len(onehot_2d), 3):      # as we flatten the vector, hence every 5 samples is a base
+    for i in range(0, len(onehot_2d), 3):      # as we flatten the vector, every 3 samples represent a structural symbol
         try:
             #print(len(onehot_seq))
             seq_2d += bases[np.argmax(onehot_2d[i:i+3])]
