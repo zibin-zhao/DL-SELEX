@@ -23,13 +23,8 @@ def write_to_fasta(sequences, output_path):
 def onehot_to_seq(onehot_seq):
     bases = ['A', 'T', 'C', 'G']
     seq = ''
-    for i in range(0, len(onehot_seq), 6):      # as we flatten the vector, hence every 5 samples is a base
-        try:
-            #print(len(onehot_seq))
-            seq += bases[np.argmax(onehot_seq[i:i+6])]
-        except IndexError:
-            print(f"Error at index {i} with onehot_seq length {len(onehot_seq)}")
-            break
+    for i in range(0, len(onehot_seq), 4):  # each base is represented by 4 elements
+        seq += bases[np.argmax(onehot_seq[i:i+4])]
     return seq
 
 # def decode_class(onehot_class):
