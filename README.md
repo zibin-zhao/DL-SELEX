@@ -17,6 +17,10 @@ AptaVAE is designed as the first part of the DL-SELEX approach, which generates 
 
 AptaClux as the second part of the DL-SELEX approach, can be accessed via our online web server at http://hsingapp.ust.hk. To deploy the model locally for own use, detailed procedure can be found in the README file under the AptaClux directory.
 
+## Models comparison
+
+We have also compared the performance of our AptaClux to current available deep learning models (i.e. AptaDiff, RaptGen), all comparison files have been deposited.
+
 ## Figures
 
 The folder Figures contains the Python scripts for data visualization in this manuscript.
