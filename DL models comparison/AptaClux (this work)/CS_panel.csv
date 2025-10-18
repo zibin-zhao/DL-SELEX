@@ -1,0 +1,9 @@
+﻿panel_id,Sequence,Sequence_2d,label
+0,GGGGATTTTGGTTGCACTATTTGGGTCGGTCTTTTTGGG,..............(((...)))................,1
+1,GGGGATTTTGGTTGCACTATGTGGGTCGGTCTTTTTGGG,..............(((...)))................,1
+2,GGGGATTTGGGGTTTTCTATGTTTTTCGTCCTTTTTTTG,.......................................,0
+3,GTGGATTTTGATGTTTCTATGTTTTTCGTCCATGTCGGC,..................(.(.....).)((.....)).,0
+4,GGGGATTTGGGGGGTTCTATGTTTTTCGTCCTTTTTTTG,.......................................,0
+5,GGGGATTTGGGGGGTTCTAGGTTTTTCGTCCTTTTTTTG,..................(((........))).......,0
+6,GGGGATTTGGGGTTGTCTATGTTTTACGTCCTTTTTGTG,.......................................,0
+7,GGGGATTTCGGGACGTCTATGTTTTACGTCCTTTTTTTG,..........((((((.........))))))........,0
