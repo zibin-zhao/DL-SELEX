@@ -20,11 +20,3 @@ AptaClux as the second part of the DL-SELEX approach, can be accessed via our on
 ## Models comparison
 
 We have also compared the performance of our AptaClux to current available deep learning models (i.e. AptaDiff, RaptGen), all comparison files have been deposited.
-
-## Figures
-
-The folder Figures contains the Python scripts for data visualization in this manuscript.
-
-## Contacts
-
-For further inquiries related to the supplementary code, please contact zzhaobz@connect.ust.hk
